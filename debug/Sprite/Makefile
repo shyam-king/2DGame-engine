@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles /home/shyam/Programming/SDL2/2DGame-engine/debug/Sprite/CMakeFiles/progress.marks
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f CMakeFiles/Makefile2 Sprite/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f CMakeFiles/Makefile2 Sprite/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f CMakeFiles/Makefile2 Sprite/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f CMakeFiles/Makefile2 Sprite/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+Sprite/CMakeFiles/Sprite.dir/rule:
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f CMakeFiles/Makefile2 Sprite/CMakeFiles/Sprite.dir/rule
+.PHONY : Sprite/CMakeFiles/Sprite.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# Convenience name for target.
+Sprite: Sprite/CMakeFiles/Sprite.dir/rule
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named Sprite
-
-# Build rule for target.
-Sprite: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Sprite
 .PHONY : Sprite
 
 # fast build rule for target.
 Sprite/fast:
-	$(MAKE) -f Sprite/CMakeFiles/Sprite.dir/build.make Sprite/CMakeFiles/Sprite.dir/build
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f Sprite/CMakeFiles/Sprite.dir/build.make Sprite/CMakeFiles/Sprite.dir/build
 .PHONY : Sprite/fast
 
-main.o: main.cpp.o
+Sprite.o: Sprite.cpp.o
 
-.PHONY : main.o
+.PHONY : Sprite.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+Sprite.cpp.o:
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f Sprite/CMakeFiles/Sprite.dir/build.make Sprite/CMakeFiles/Sprite.dir/Sprite.cpp.o
+.PHONY : Sprite.cpp.o
 
-main.i: main.cpp.i
+Sprite.i: Sprite.cpp.i
 
-.PHONY : main.i
+.PHONY : Sprite.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+Sprite.cpp.i:
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f Sprite/CMakeFiles/Sprite.dir/build.make Sprite/CMakeFiles/Sprite.dir/Sprite.cpp.i
+.PHONY : Sprite.cpp.i
 
-main.s: main.cpp.s
+Sprite.s: Sprite.cpp.s
 
-.PHONY : main.s
+.PHONY : Sprite.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+Sprite.cpp.s:
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(MAKE) -f Sprite/CMakeFiles/Sprite.dir/build.make Sprite/CMakeFiles/Sprite.dir/Sprite.cpp.s
+.PHONY : Sprite.cpp.s
 
 # Help Target
 help:
@@ -170,12 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main"
-	@echo "... edit_cache"
 	@echo "... Sprite"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... edit_cache"
+	@echo "... Sprite.o"
+	@echo "... Sprite.i"
+	@echo "... Sprite.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/shyam/Programming/SDL2/2DGame-engine/debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL2 -I/home/shyam/Programming/SDL2/2DGame-engine/source/Sprite 
+CXX_INCLUDES = -I/usr/include/SDL2 
 

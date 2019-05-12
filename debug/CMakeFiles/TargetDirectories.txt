@@ -1,3 +1,6 @@
 /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles/rebuild_cache.dir
 /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles/main.dir
 /home/shyam/Programming/SDL2/2DGame-engine/debug/CMakeFiles/edit_cache.dir
+/home/shyam/Programming/SDL2/2DGame-engine/debug/Sprite/CMakeFiles/rebuild_cache.dir
+/home/shyam/Programming/SDL2/2DGame-engine/debug/Sprite/CMakeFiles/Sprite.dir
+/home/shyam/Programming/SDL2/2DGame-engine/debug/Sprite/CMakeFiles/edit_cache.dir

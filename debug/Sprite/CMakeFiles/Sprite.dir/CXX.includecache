@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/shyam/Programming/SDL2/2DGame-engine/source/Sprite/Sprite.h
-
-/home/shyam/Programming/SDL2/2DGame-engine/source/main.cpp
+/home/shyam/Programming/SDL2/2DGame-engine/source/Sprite/Sprite.cpp
 SDL.h
 -
 SDL_image.h
 -
 Sprite.h
--
+/home/shyam/Programming/SDL2/2DGame-engine/source/Sprite/Sprite.h
 iostream
 -
+
+/home/shyam/Programming/SDL2/2DGame-engine/source/Sprite/Sprite.h
 
 /usr/include/SDL2/SDL.h
 SDL_main.h

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSprite.a  CMakeFiles/Sprite.dir/Sprite.cpp.o
+/usr/bin/ranlib libSprite.a
