@@ -1,0 +1,5 @@
+[.] basic main loop
+[.] window
+[.] events
+[ ] implement sprite class
+[ ] fps 
