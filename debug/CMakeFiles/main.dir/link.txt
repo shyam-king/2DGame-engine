@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/main.dir/main.cpp.o  -o main -lSDL2 
+/usr/bin/c++    -rdynamic CMakeFiles/main.dir/main.cpp.o  -o main -lSDL2 -lSDL2_image 

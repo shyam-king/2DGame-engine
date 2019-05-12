@@ -1,4 +1,5 @@
 #include<SDL.h>
+#include<SDL_image.h>
 #include<iostream>
 
 void onQuit();
@@ -14,6 +15,23 @@ int main(int argc, char *argv[]){
 
 	SDL_Event event;
 	bool gameRunning = true;
+
+	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	SDL_Rect rect;
+	rect.x = rect.y = 0;
+	rect.h = 100;
+	rect.w = 100;
+
+	SDL_SetRenderDrawColor(renderer, 255,0,0,0);
+	SDL_RenderFillRect(renderer, &rect);
+	SDL_RenderPresent(renderer);
+
+	SDL_Surface *img = IMG_Load("image.png");
+	SDL_Texture *image = SDL_CreateTextureFromSurface(renderer, img);
+	SDL_FreeSurface(img);
+
+	SDL_RenderCopy(renderer, image, NULL, &rect);
+	SDL_RenderPresent(renderer);
 
 	while (gameRunning == true){
 		//event-handling
@@ -31,5 +49,5 @@ int main(int argc, char *argv[]){
 }
 
 void onQuit() {
-	std::cout << "quitiing.\n";
+	std::cout << "quiting.\n";
 }

@@ -18,6 +18,7 @@ CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_gamecontroller.h
 CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_gesture.h
 CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_haptic.h
 CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_hints.h
+CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_image.h
 CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_joystick.h
 CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_keyboard.h
 CMakeFiles/main.dir/main.cpp.o: /usr/include/SDL2/SDL_keycode.h
