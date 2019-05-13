@@ -3,6 +3,8 @@
 #include<Sprite.h>
 #include<iostream>
 
+#define FPS 30
+
 void onQuit();
 
 int main(int argc, char *argv[]){
@@ -14,6 +16,8 @@ int main(int argc, char *argv[]){
 	640, 480,
 	SDL_WINDOW_MOUSE_FOCUS);
 
+	uint32_t ticks, timeElapsed;
+
 	if (!window)
 		std::cerr << "OOPS: " << SDL_GetError();
 
@@ -22,26 +26,22 @@ int main(int argc, char *argv[]){
 
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1,
 		SDL_RENDERER_ACCELERATED);
-	SDL_Rect rect;
-	rect.x = rect.y = 0;
-	rect.h = 100;
-	rect.w = 100;
 
-	SDL_SetRenderDrawColor(renderer, 255,0,0,0);
-	SDL_RenderFillRect(renderer, &rect);
-	SDL_RenderPresent(renderer);
+	SDL_SetRenderDrawColor(renderer, 255, 0 ,0 ,0);
+	//SDL_RenderClear(renderer);
 
-	SDL_Surface *img = IMG_Load("image.png");
-	SDL_Texture *image = SDL_CreateTextureFromSurface(renderer, img);
-	SDL_FreeSurface(img);
+	Sprite A(renderer, "image.png", 2);
+	SDL_Rect dest;
 
-	SDL_RenderCopy(renderer, image, NULL, &rect);
-	SDL_RenderPresent(renderer);
 
-	Sprite A(10);
-	A.print();
+	dest.x = dest.y = 0;
+	dest.w = dest.h = 64;
+	
+
+	uint8_t f = 0;
 
 	while (gameRunning == true){
+		ticks = SDL_GetTicks();
 		//event-handling
 		if (SDL_PollEvent(&event))
 			switch(event.type) {
@@ -49,7 +49,19 @@ int main(int argc, char *argv[]){
 					onQuit();
 					gameRunning = false;
 					break;
-			}
+		}
+
+		//game
+		SDL_RenderFillRect(renderer, NULL);
+		A.drawFrame(f, &dest);
+		f = 1 - f;
+
+		timeElapsed = SDL_GetTicks() - ticks;
+		if (timeElapsed  < 1000/FPS) 
+			SDL_Delay(1000/FPS - timeElapsed);
+		SDL_RenderPresent(renderer);
+		timeElapsed = SDL_GetTicks() - ticks;
+		std::cout << "FPS: " << 1000/timeElapsed << "\n";
 	}
 
 	SDL_Quit();

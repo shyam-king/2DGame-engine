@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/shyam/Programming/SDL2/2DGame-engine/source/Sprite/Sprite.h
+vector
+-
 
 /home/shyam/Programming/SDL2/2DGame-engine/source/main.cpp
 SDL.h

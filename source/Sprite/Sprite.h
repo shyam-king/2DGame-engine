@@ -1,14 +1,18 @@
 #ifndef SPRITE_H
 #define SPRITE_H
 
+#include<vector>
+
 class Sprite {
 private:
-  SDL_Texture *frames;
+  std::vector<SDL_Texture*> frames;
   uint8_t nFrames;
-  int a;
+  SDL_Renderer *renderer;
 public:
-  Sprite(int x);
-  void print();
+  Sprite(SDL_Renderer*, const char *, uint8_t);
+  Sprite(SDL_Renderer*, const char *files[], uint8_t);
+  void drawFrame(uint8_t, SDL_Rect *);
+  ~Sprite();
 };
 
 #endif
