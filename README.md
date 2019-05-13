@@ -1,5 +1,5 @@
 # 2DGame-engine
 2D Game Engine made with SDL2
 
-#Author
+# Author
 m.shyam.tnj@gmail.com
